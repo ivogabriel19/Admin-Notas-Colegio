@@ -8,11 +8,11 @@ namespace Colegio.Models
         public int Id { get; set; }
         [Required(ErrorMessage = ErrMsgs.CampoRequerido)]
         [StringLength(12,MinimumLength =4,ErrorMessage =ErrMsgs.LargoErroneo)]
-        [RegularExpression(@"a-zA-Z0-9", ErrorMessage = ErrMsgs.CaracteresNoPermitidos)]
+        [RegularExpression(@"[a-zA-Z0-9]*", ErrorMessage = ErrMsgs.CaracteresNoPermitidos)]
         public string Legajo { get; set; }
         [Required(ErrorMessage = ErrMsgs.CampoRequerido)]
         [StringLength(30, MinimumLength = 2, ErrorMessage = ErrMsgs.LargoErroneo)]
-        [RegularExpression(@"a-zA-Z ", ErrorMessage = ErrMsgs.CaracteresNoPermitidos)]
+        [RegularExpression(@"[a-zA-Z ]*", ErrorMessage = ErrMsgs.CaracteresNoPermitidos)]
         public string Nombre { get; set; }
         [Required(ErrorMessage = ErrMsgs.CampoRequerido)]
         [StringLength(100, MinimumLength = 5, ErrorMessage = ErrMsgs.LargoErroneo)]

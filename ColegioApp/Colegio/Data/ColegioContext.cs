@@ -30,6 +30,7 @@ namespace Colegio.Data
         public DbSet<Docente> Docentes { get; set; }
         public DbSet<Alumno> Alumnos { get; set; }
         public DbSet<Curso> Cursos { get; set; }
+        public DbSet<CursoMateria> ClientesVehiculos { get; set; }
         public DbSet<Materia> Materias { get; set; }
         public DbSet<Evaluacion> Evaluaciones { get; set; }
         public DbSet<Examen> Examenes { get; set; }

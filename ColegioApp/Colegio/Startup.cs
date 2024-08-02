@@ -1,4 +1,7 @@
-﻿namespace Colegio
+﻿using Colegio.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace Colegio
 {
     public static class Startup
     {
@@ -14,6 +17,8 @@
         }
         private static void Configureservices(WebApplicationBuilder builder) {
 
+            builder.Services.AddDbContext<ColegioContext>(options => options.UseInMemoryDatabase("ColecioDb"));
+            
             // Add services to the container.
             builder.Services.AddControllersWithViews();
         }
